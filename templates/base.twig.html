@@ -1,73 +1,59 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <title>{{ site.name }}</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet/less" type="text/css" href="{{ site.template_url }}/assets/less/main.less" />
-  </head>
-  <body>
-    <div class="sidebar left w20 sw100 mw30">
-      <header>
-        {% block header %}
-          <img src="{{ site.template_url }}/assets/images/logo.png" alt="logo">
-          <h1>{{ site.name }}</h1>
-          <h3 class="sub">{{ site.description }}</h3>
-        {% endblock %}
-      </header>
-    </div>
-    <div class="main w60 ow20 sw100 sow0 mw70 mow30">
-      <div class="wrapper">
-        {% block content %}
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis ac nunc quis ullamcorper. Suspendisse porttitor quis sem vitae rutrum. Cras vel urna lacinia, efficitur nunc et, porta enim. Morbi enim metus, bibendum eget elementum vitae, lobortis eu ante. Aenean auctor dignissim neque, placerat eleifend ipsum aliquam vitae. Nullam tempus, velit vel auctor semper, lacus turpis condimentum enim, vel malesuada sem odio ac risus. Nulla aliquet ligula sed purus lacinia, id convallis nisi efficitur. Nullam vestibulum rhoncus mauris, eget pharetra felis sagittis id. Nullam porta mi nibh. Etiam ac bibendum odio. Nunc et velit in eros consectetur blandit. Fusce tempus est imperdiet porttitor hendrerit. Suspendisse lobortis tempus nulla et volutpat. Quisque venenatis elit sed ullamcorper scelerisque.</p>
-        <p>Quisque a felis porta, imperdiet eros vel, tincidunt neque. Pellentesque feugiat rutrum libero at dictum. Sed consequat orci quis nisi blandit sollicitudin. Integer sodales sollicitudin mollis. Proin quis nisi vestibulum, lacinia enim eget, lacinia justo. Nulla facilisi. Proin lacinia sagittis faucibus. Etiam fermentum pretium mollis. Aenean sit amet venenatis purus. Aenean tincidunt gravida posuere.</p>
-        <p>Curabitur ac suscipit odio, ac facilisis tortor. Proin hendrerit eros non hendrerit bibendum. Vestibulum lacinia rutrum ex, ac tincidunt quam eleifend vitae. Curabitur sodales libero justo, vel eleifend eros cursus eu. Nam feugiat eros quis vestibulum porttitor. Vivamus vestibulum sagittis pretium. Pellentesque vel felis ornare, tristique metus id, suscipit nunc. Nulla odio est, hendrerit ac sagittis dapibus, gravida id sem. Nam velit tortor, consectetur a tincidunt eget, ornare vel felis. Suspendisse elit tortor, gravida non faucibus at, posuere sed metus. Suspendisse non augue sapien. Morbi in molestie massa, tincidunt vulputate turpis. Sed diam nisi, semper vel justo ac, porttitor ultrices odio. Mauris fermentum egestas massa, a dictum orci. Nunc aliquam risus lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-        <p>Morbi tristique consequat arcu, et mollis massa scelerisque a. Quisque eu turpis placerat, cursus risus ac, vulputate erat. Sed ultrices condimentum odio, nec blandit tellus cursus eu. Morbi in nisi sit amet ex rutrum auctor. In fermentum arcu sit amet metus posuere eleifend vel at augue. Nullam et suscipit neque. Curabitur auctor scelerisque rutrum. Fusce tempor malesuada facilisis. Pellentesque non ipsum eros. Mauris vitae risus quis ante maximus efficitur. Etiam elementum, mauris eget elementum porttitor, risus mauris lobortis turpis, et ultricies velit justo et eros. In vel suscipit sapien. Suspendisse nunc nisl, efficitur nec nisi ut, interdum vestibulum nulla.</p>
-        <p>Etiam vel lobortis leo. Cras libero nunc, faucibus nec imperdiet sit amet, imperdiet nec nunc. Pellentesque eget rhoncus magna. Praesent in dolor id lorem imperdiet pharetra. Vestibulum rutrum enim eget orci fermentum imperdiet. Suspendisse ut commodo erat. Suspendisse luctus magna nec viverra mattis. Sed odio enim, dignissim id tempor eget, placerat at tortor. Donec tincidunt, sapien ac egestas lobortis, dui magna blandit sapien, non commodo magna ligula ut ex. Suspendisse ac enim in erat rutrum porttitor. Sed et suscipit nulla, vel finibus ipsum. In hac habitasse platea dictumst. Proin purus lacus, sollicitudin eget molestie non, vulputate id nisl. Sed auctor imperdiet lacus sollicitudin pretium. Morbi scelerisque sem eget dapibus vestibulum.</p>
-        <p>Nullam consequat interdum nulla, nec rhoncus nunc pharetra ultricies. Sed sit amet ullamcorper lorem. Curabitur ultricies nisl urna, non lacinia erat feugiat fermentum. Integer nec libero nibh. Ut viverra erat ut lacus fermentum euismod at et sapien. Nullam ex ligula, porta ac libero vel, vehicula vehicula magna. Ut eget ultricies neque. Proin commodo et enim ac rutrum. Curabitur pharetra turpis dignissim nisl iaculis rhoncus.</p>
-        <p>Duis vitae ex elit. Pellentesque nec ipsum ante. Ut non tortor vel lectus egestas suscipit. Donec ultricies quam vel odio commodo, id finibus lectus porta. Sed at posuere nisl. Nam ultrices commodo eros, sit amet euismod risus mattis eu. Vestibulum ultrices hendrerit sem quis accumsan. Quisque ut porta velit. Pellentesque rutrum erat pretium quam ultrices, a lobortis elit pharetra. In arcu neque, ullamcorper ut ligula quis, consectetur condimentum mi. Maecenas euismod nibh ac massa porttitor, sit amet iaculis quam dignissim. Mauris tempor feugiat sem, non interdum elit dapibus facilisis. Curabitur dapibus placerat erat vitae suscipit.</p>
-        <p>Cras justo eros, vulputate a sem et, sodales ultricies velit. Integer condimentum purus ut risus luctus, nec pellentesque ante venenatis. Fusce elit ex, fermentum id risus et, fermentum accumsan lorem. Morbi nisl purus, pellentesque sed posuere eu, accumsan id massa. Praesent porta orci fringilla lacus tincidunt vestibulum. Phasellus vehicula, lorem et tempus euismod, arcu velit lacinia nibh, non dignissim est mi vitae risus. Aliquam erat volutpat. Sed erat arcu, sollicitudin sit amet elementum id, pretium ut tortor. Cras ac laoreet nisl, venenatis ultrices sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc rhoncus, nisl a rutrum molestie, tortor lorem vulputate lacus, sed suscipit augue nunc a orci. Vestibulum sollicitudin enim eget pulvinar ullamcorper.</p>
-        <p>Nulla facilisi. Proin scelerisque, risus ac tincidunt elementum, massa lacus dignissim magna, vel pharetra enim arcu eu quam. Praesent sagittis blandit commodo. Mauris sed fringilla augue. Duis hendrerit condimentum velit, eu dictum nisl finibus sit amet. Phasellus eu quam dolor. Vestibulum dignissim tempor sagittis. Proin et tellus interdum, commodo diam vel, maximus erat. Nullam lobortis luctus odio, nec pretium sapien tempus sed. Cras sodales dui sed justo facilisis, ut aliquet lacus vulputate. Proin massa erat, consectetur sed dignissim sed, cursus vel tellus. Nam vel nisl nec magna sodales porttitor.</p>
-        <p>Ut fermentum porttitor pretium. Sed malesuada libero nibh, nec volutpat sapien condimentum at. Suspendisse vel nibh eget tellus ullamcorper pellentesque ut eget mauris. Maecenas pulvinar lacus porttitor purus convallis, id convallis ante facilisis. Phasellus eu pellentesque tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla in massa lectus. Praesent nibh dui, varius non purus sed, aliquet hendrerit massa.</p>
-        {% endblock %}
+<head>
+  <title>{{ site.name }}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{{ site.template_url }}/assets/css/main.css" />
+</head>
+<body>
+  <div class="sidebar left w20 sw100 mw30">
+    <header>
+      {% block header %}
+      <a href="{{ site.wpurl }}">
+        <img src="{{ site.template_url }}/assets/images/logo.png" alt="logo">
+      </a>
+      <div class="title">
+        <h1>{{ site.name }}</h1>
+        <h3 class="sub">{{ site.description }}</h3>
       </div>
+      {% endblock %}
+    </header>
+  </div>
+  <div class="main w60 ow20 sw100 sow0 mw70 mow30">
+    <div class="wrapper">
+      {% block content %}
+      {% endblock %}
     </div>
-    <div class="sidebar right w20 sw100 mw30">
-      <footer>
-        {% block footer %}
-          <ul class="icons sidebar-links">
-            {% block footer_icons %}
-            <li class="icon fa-twitter">
-              <a href="#">
-                Twitter
-              </a>
-            </li>
-            <li class="icon fa-github">
-              <a href="#">
-                Github
-              </a>
-            </li>
-            <li class="icon fa-dribbble">
-              <a href="#">
-                Dribbble
-              </a>
-            </li>
-            <li class="icon fa-envelope">
-              <a href="#">
-                Email
-              </a>
-            </li>
-            {% endblock %}
-          </ul>
-          <ul class="bottom">
-            {% block footer_copyright %}
-            <li>&copy; {{ site.name }}</li><li>Design: <a href="https://beryju.org">BeryJu</a></li>
-            {% endblock %}
-          </ul>
+  </div>
+  <div class="sidebar right w20 sw100 mw30">
+    <footer>
+      <form method="get" id="searchform" action="{{ home }}/">
+        <div class="search">
+          <input type="text" name="s" placeholder="Search...">
+          <button type="submit" value="">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </form>
+      {% block footer %}
+      <div class="sidebar-link-container">
+        <ul class="sidebar-links">
+          {% for item in menu.get_items %}
+          <li class="{{ item.classes | join(' ') }}">
+            <a class="nav-main-link" href="{{item.get_link}}">{{item.title}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <ul class="bottom">
+        {% block footer_copyright %}
+        <li>&copy; {{ site.name }}</li><li>Design: <a href="https://beryju.org">BeryJu</a></li>
         {% endblock %}
-      </footer>
-    </div>
-    <script src="{{ site.template_url }}/assets/js/less.min.js" data-env="development" type="text/javascript"></script>
-    {% block scripts %}{% endblock %}
-  </body>
+      </ul>
+      {% endblock %}
+    </footer>
+  </div>
+  {% block scripts %}{% endblock %}
+</body>
 </html>
