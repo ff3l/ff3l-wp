@@ -28,13 +28,11 @@
   </div>
   <div class="sidebar right w20 sw100 mw30">
     <footer>
-      <form method="get" id="searchform" action="{{ home }}/">
-        <div class="search">
-          <input type="text" name="s" placeholder="Search...">
-          <button type="submit" value="">
-            <i class="fa fa-search"></i>
-          </button>
-        </div>
+      <form class="search" method="get" id="searchform" action="{{ home }}/">
+        <input type="text" name="s" placeholder="Search...">
+        <button type="submit" value="">
+          <i class="fa fa-search"></i>
+        </button>
       </form>
       {% block footer %}
       <div class="sidebar-link-container">
@@ -48,7 +46,8 @@
       </div>
       <ul class="bottom">
         {% block footer_copyright %}
-        <li>&copy; {{ site.name }}</li><li>Design: <a href="https://beryju.org">BeryJu</a></li>
+        <li>&copy; {{ site.name }}</li>
+        <li>Design: <a target="_blank" href="https://beryju.org">BeryJu</a></li>
         {% endblock %}
       </ul>
       {% endblock %}

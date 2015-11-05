@@ -1,3 +1,5 @@
 <?php
 require_once 'common.inc.php';
-Common::render("single");
+Common::render("single", array(
+	"post" => new TimberPost()
+	));

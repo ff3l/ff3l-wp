@@ -13,10 +13,13 @@ class Common {
 		return $data;
 	}
 
-	public static function render($name) {
+	public static function render($name, $args = array()) {
 		$context = Timber::get_context();
 		$context['site'] = Common::populate_context();
 		$context['posts'] = Timber::get_posts();
+		foreach ($args as $key => $value) {
+			$context[$key] = $value;
+		}
 		Timber::render("templates/$name.twig.html", $context);
 	}
 
