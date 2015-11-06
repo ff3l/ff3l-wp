@@ -8,19 +8,26 @@ class Common {
 		foreach (Common::$BLOGINFO_FIELDS as $key) {
 			$data[$key] = get_bloginfo($key);
 		}
+		$data['title'] = $data['name'] + " | " +
+					is_front_page() ? $data['description'] : wp_title('&raquo;', false);
 		$data['menu'] = new TimberMenu();
 		$data['home'] = home_url('/');
 		return $data;
+	}
+
+	public static function get_gravatar_url( $email ) {
+		return '//gravatar.com/avatar/' . md5( strtolower( trim ( $email ) ) );
 	}
 
 	public static function render($name, $args = array()) {
 		$context = Timber::get_context();
 		$context['site'] = Common::populate_context();
 		$context['posts'] = Timber::get_posts();
+		$context['pagination'] = Timber::get_pagination();
 		foreach ($args as $key => $value) {
 			$context[$key] = $value;
 		}
-		Timber::render("templates/$name.twig.html", $context);
+		Timber::render("templates/$name.twig", $context);
 	}
 
 }

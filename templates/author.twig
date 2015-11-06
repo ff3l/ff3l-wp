@@ -1,0 +1,18 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+  <div class="author">
+    <div class="author-header">
+      <div class="author-avatar">
+        <img src="{{ author_avatar }}" alt="{{ author_avatar }}">
+      </div>
+      <div class="author-name">
+        <h2>{{ author.nickname}}</h2>
+        <h3 class="sub">{{ author.name }}</h3>
+      </div>
+    </div>
+    <div class="author-body">
+      TODO: Put something here
+    </div>
+  </div>
+{% endblock %}

@@ -2,7 +2,7 @@
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
 html {
   margin: 0;
-  min-height: 100%;
+  height: 100%;
   font-family: "Source Sans Pro";
 }
 a:link {
@@ -22,7 +22,6 @@ body {
   display: flex;
   margin: 0;
   background-color: #fff;
-  background-image: url('../images/bg.png');
   background-size: cover;
   background-attachment: fixed;
 }
@@ -93,99 +92,112 @@ body {
 .ow100 {
   margin-left: 100%;
 }
-header,
-.header {
-  margin-right: 15px;
-  padding: 10px;
-  text-align: right;
-  color: #EEEEEE;
-}
-header a img,
-.header a img {
-  max-width: 50%;
-}
 .sidebar {
-  min-height: 100%;
   height: 100%;
   position: fixed;
   background-color: transparent;
 }
-.main {
-  z-index: 2020;
-  padding: 50px;
-  -webkit-box-shadow: 0px 0px 30px 8px rgba(193, 0, 96, 0.3);
-  -moz-box-shadow: 0px 0px 30px 8px rgba(193, 0, 96, 0.3);
-  box-shadow: 0px 0px 30px 8px rgba(193, 0, 96, 0.3);
-  box-sizing: border-box;
-  background: rgba(142, 0, 71, 0.9);
-  color: #EEEEEE;
+.sidebar.left header {
+  margin-right: 15px;
+  padding: 10px;
+  text-align: right;
+  color: #dc0067;
 }
-.search {
+.sidebar.left header a {
+  width: 50%;
+}
+.sidebar.left header a img {
+  max-width: 50%;
+}
+.sidebar.right .search {
   justify-content: space-between;
   display: flex;
   height: 50px;
 }
-.search input[type=text] {
+.sidebar.right .search input[type=text] {
   width: 100%;
   outline: 0;
   border: 0;
   padding: 0 30px;
   font-size: 18px;
   background-color: transparent;
+  color: #dc0067;
 }
-.search input[type=text] :focus {
+.sidebar.right .search input[type=text] ::-webkit-input-placeholder {
+  color: #dc0067;
+}
+.sidebar.right .search input[type=text] ::-moz-placeholder {
+  color: #dc0067;
+}
+.sidebar.right .search input[type=text] :-ms-input-placeholder {
+  color: #dc0067;
+}
+.sidebar.right .search input[type=text] :focus {
   outline: 0;
 }
-.search button[type=submit] {
+.sidebar.right .search button[type=submit] {
   border: none;
   background: none;
   min-width: 50px;
 }
-.search button[type=submit] i {
-  color: #EEEEEE;
+.sidebar.right .search button[type=submit] i {
+  color: #dc0067;
 }
-ul.sidebar-links {
+.sidebar.right ul.sidebar-links {
   list-style-type: none;
   padding: 0;
 }
-ul.sidebar-links li {
+.sidebar.right ul.sidebar-links li {
   width: 100%;
   min-height: 50px;
   padding: 0 30px;
   transition-duration: 0.3s;
   transition-property: color, background-color;
-  color: #EEEEEE;
+  color: #dc0067;
 }
-ul.sidebar-links li a {
+.sidebar.right ul.sidebar-links li a {
   padding: 15px;
   display: inline-block;
   text-decoration: none;
 }
-ul.sidebar-links li a span.icon {
+.sidebar.right ul.sidebar-links li a span.icon {
   padding: 10px;
   font-size: 1.8em;
 }
-ul.sidebar-links li:hover,
-ul.sidebar-links li:focus,
-ul.sidebar-links li:active {
-  background-color: rgba(193, 0, 96, 0.1);
-  color: #ffffff;
+.sidebar.right ul.sidebar-links li:hover,
+.sidebar.right ul.sidebar-links li:focus,
+.sidebar.right ul.sidebar-links li:active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ff1080;
 }
-ul.sidebar-links li.indent {
+.sidebar.right ul.sidebar-links li.indent {
   text-indent: 30px;
 }
-ul.bottom {
+.sidebar.right ul.bottom {
   position: absolute;
   bottom: 1%;
   right: 15px;
   text-align: right;
   list-style-type: none;
   padding: 0;
+  font-weight: 300;
+  color: #dc0067;
+}
+.main {
+  z-index: 2020;
+  padding: 50px;
+  -webkit-box-shadow: 0px 0px 30px 8px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 0px 30px 8px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 30px 8px rgba(0, 0, 0, 0.45);
+  box-sizing: border-box;
+  background: rgba(179, 179, 179, 0.9);
+  color: #dc0067;
+  min-height: 100%;
 }
 .post {
-  background-color: rgba(193, 0, 96, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 30px;
-  color: #EEEEEE;
+  color: #dc0067;
   margin-bottom: 30px;
   border-radius: 5px;
 }
@@ -195,6 +207,48 @@ ul.bottom {
 }
 .post .post-header a.post-author {
   text-decoration: none;
+  text-align: right;
+  margin-top: 10px;
+}
+.comment-container .comment {
+  padding: 10px 30px 15px;
+  background: rgba(1, 1, 1, 0.1);
+}
+.author {
+  padding: 30px;
+}
+.author .author-header {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.author .author-header .author-avatar img {
+  height: 100%;
+}
+.author .author-header .author-name {
+  width: calc(20%);
+  margin-left: 60px;
+}
+.paginator-container {
+  display: flex;
+  justify-content: space-around;
+}
+.paginator-container .paginator {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+.paginator-container .paginator li {
+  padding: 20px;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.paginator-container .paginator li:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.paginator-container .paginator li:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 @media screen and (max-width: 720px) {
   .sw0 {
@@ -293,17 +347,36 @@ ul.bottom {
   .header .title h3 {
     text-align: left;
   }
+  .sidebar {
+    height: auto;
+  }
   .sidebar.left {
     position: static;
     margin-bottom: 15px;
   }
-  .main {
-    padding: 0 5px;
-  }
   .sidebar.right {
     position: static;
-    background-color: rgba(40, 0, 20, 0.9);
-    color: #EEEEEE;
+    background-color: rgba(179, 179, 179, 0.9);
+    color: #dc0067;
+  }
+  .main {
+    padding: 0 5px;
+    min-height: auto;
+  }
+  .sidebar-link-container {
+    padding-bottom: 100px;
+  }
+  ul.sidebar-links li {
+    padding: 0;
+  }
+  ul.bottom {
+    margin-top: -100px;
+    width: 100%;
+    text-align: center;
+    bottom: auto;
+  }
+  .search {
+    margin-top: 10px;
   }
 }
 @media screen and (min-width: 721px) and (max-width: 1110px) {
@@ -392,24 +465,30 @@ ul.bottom {
     height: inherit;
     min-height: inherit;
   }
-  .sidebar.right ul.sidebar-links li {
-    padding: 0 0 0 15px;
-  }
-  .sidebar.right ul.bottom {
-    left: 15px;
-    text-align: left;
-  }
-  footer {
+  .sidebar.right footer {
     height: 100%;
     overflow: hidden;
   }
+  .sidebar.right footer .search {
+    margin-right: 10px;
+  }
+  .sidebar.right footer .search input[type=text] {
+    margin-right: -30px;
+  }
+  .sidebar.right footer ul.sidebar-links li {
+    padding: 0 0 0 15px;
+  }
+  .sidebar.right footer ul.bottom {
+    left: 15px;
+    text-align: left;
+  }
   .sidebar-link-container {
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 100%;
   }
 }
-@media screen and (max-height: 414px) {
-  ul.bottom {
+@media screen and (min-width: 736px) and (max-width: 736px) {
+  header a {
     display: none;
   }
 }
