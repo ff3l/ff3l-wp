@@ -165,6 +165,9 @@ body {
   padding: 10px;
   font-size: 1.8em;
 }
+.sidebar.right ul.sidebar-links li .child {
+  text-indent: 30px;
+}
 .sidebar.right ul.sidebar-links li:hover,
 .sidebar.right ul.sidebar-links li:focus,
 .sidebar.right ul.sidebar-links li:active {
