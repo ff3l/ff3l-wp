@@ -171,14 +171,10 @@ body {
 .sidebar.right ul.sidebar-links li:hover,
 .sidebar.right ul.sidebar-links li:focus,
 .sidebar.right ul.sidebar-links li:active {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ff1080;
+  background-color: rgba(220, 0, 103, 0.1);
 }
 .sidebar.right ul.sidebar-links ul.nav-drop {
   list-style-type: none;
-}
-.sidebar.right ul.sidebar-links li.indent {
-  text-indent: 30px;
 }
 .sidebar.right ul.bottom {
   position: absolute;
