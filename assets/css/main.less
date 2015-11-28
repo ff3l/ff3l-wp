@@ -6,6 +6,7 @@
 
 @primary-bg: #fff;
 @primary-fg: #dc0067;
+@post-fg: #000;
 
 @sidebar-hover-duration: 0.3s;
 @main-shadow-hint: rgba(0, 0, 0, 0.45);
@@ -153,6 +154,7 @@ body {
             color: lighten(@primary-fg, 10%);
         }
         li.indent {
+            list-style-type: none;
             text-indent: 30px;
         }
     }
@@ -194,7 +196,7 @@ body {
 .post {
     background-color: fade(@primary-bg, 30%);
     padding: 30px;
-    color: @primary-fg;
+    color: @post-fg;
     margin-bottom: 30px;
     border-radius: 5px;
     .post-header {

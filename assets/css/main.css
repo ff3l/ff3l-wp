@@ -175,6 +175,7 @@ body {
   color: #ff1080;
 }
 .sidebar.right ul.sidebar-links li.indent {
+  list-style-type: none;
   text-indent: 30px;
 }
 .sidebar.right ul.bottom {
@@ -201,7 +202,7 @@ body {
 .post {
   background-color: rgba(255, 255, 255, 0.3);
   padding: 30px;
-  color: #dc0067;
+  color: #000;
   margin-bottom: 30px;
   border-radius: 5px;
 }
