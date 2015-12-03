@@ -12,6 +12,7 @@ class Common {
 					is_front_page() ? $data['description'] : wp_title('&raquo;', false);
 		$data['menu'] = new TimberMenu();
 		$data['home'] = home_url('/');
+		$data['footer'] = wp_footer();
 		return $data;
 	}
 
