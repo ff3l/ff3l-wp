@@ -4,6 +4,7 @@
 @primary-bg: rgba(179, 179, 179, 0.31);
 @primary-fg: #dc0067;
 @primary-overlay: rgba(255, 255, 255, 0.29);
+@primary-text: #000;
 
 @sidebar-hover-duration: 0.3s;
 @sidebar-padding: 15px;
@@ -103,13 +104,13 @@ body {
             background-color: transparent;
             color: @primary-fg;
             ::-webkit-input-placeholder {
-                color:    @primary-fg;
+                color: @primary-fg;
             }
             ::-moz-placeholder {
-               color:    @primary-fg;
+               color: @primary-fg;
             }
             :-ms-input-placeholder {
-               color:    @primary-fg;
+               color: @primary-fg;
             }
             :focus {
                 outline: 0;
@@ -154,7 +155,7 @@ body {
             background-color: fade(@primary-bg, 40%);;
             color: lighten(@primary-fg, 10%);
         }
-        li.indent {
+        li.child {
             text-indent: 15px;
         }
         li.current_page_item {
@@ -200,7 +201,7 @@ body {
 .post {
     background-color: @primary-overlay;
     padding: 30px;
-    color: @primary-fg;
+    color: @primary-text;
     margin-bottom: 30px;
     border-radius: 5px;
     .post-header {
