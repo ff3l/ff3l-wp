@@ -189,7 +189,7 @@ body {
   font-size: 1.8em;
 }
 .sidebar.right ul.sidebar-links li .child {
-  padding-left: 80px;
+  padding-left: 30px;
 }
 .sidebar.right ul.sidebar-links li:hover,
 .sidebar.right ul.sidebar-links li:focus,
@@ -198,7 +198,7 @@ body {
   color: #ff1080;
 }
 .sidebar.right ul.sidebar-links li.child {
-  padding-left: 80px;
+  padding-left: 30px;
 }
 .sidebar.right ul.sidebar-links li.current_page_item {
   background-color: rgba(239, 221, 21, 0.3);
@@ -400,7 +400,7 @@ body {
   }
   .sidebar.right {
     position: static;
-    background-color: rgba(102, 102, 102, 0.9);
+    background-color: rgba(102, 102, 102, 0.1);
     color: #dc0067;
   }
   .main {
@@ -421,6 +421,7 @@ body {
     width: 100%;
     text-align: center;
     bottom: auto;
+    position: static;
   }
   .search {
     margin-top: 10px;
