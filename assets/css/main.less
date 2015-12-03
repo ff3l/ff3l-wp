@@ -1,13 +1,13 @@
 @import url("font-awesome.min.css");
 @import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
 
-//@primary-bg: #C10060;
-//@primary-fg: #EEEEEE;
-
 @primary-bg: #fff;
 @primary-fg: #dc0067;
 
 @sidebar-hover-duration: 0.3s;
+@sidebar-padding: 15px;
+@sidebar-background: rgba(111, 108, 108, 0.1);
+@sidebar-current-background: rgba(239, 221, 21, 0.3);
 @main-shadow-hint: rgba(0, 0, 0, 0.45);
 
 html {
@@ -125,16 +125,16 @@ body {
 
     ul.sidebar-links {
         list-style-type: none;
+        background-color: @sidebar-background;
         padding: 0;
         li {
             width: 100%;
-            min-height: 50px;
-            padding: 0 30px;
+            padding: 0 @sidebar-padding;
             transition-duration: @sidebar-hover-duration;
             transition-property: color, background-color;
             color: @primary-fg;
             a {
-                padding: 15px;
+                padding: @sidebar-padding / 2;
                 display: inline-block;
                 text-decoration: none;
                 span.icon {
@@ -153,7 +153,11 @@ body {
             color: lighten(@primary-fg, 10%);
         }
         li.indent {
-            text-indent: 30px;
+            text-indent: 15px;
+        }
+        li.current_page_item {
+            background-color: @sidebar-current-background;
+            font-weight: 900;
         }
     }
 

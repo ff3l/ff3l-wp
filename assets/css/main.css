@@ -146,18 +146,18 @@ body {
 }
 .sidebar.right ul.sidebar-links {
   list-style-type: none;
+  background-color: rgba(111, 108, 108, 0.1);
   padding: 0;
 }
 .sidebar.right ul.sidebar-links li {
   width: 100%;
-  min-height: 50px;
-  padding: 0 30px;
+  padding: 0 15px;
   transition-duration: 0.3s;
   transition-property: color, background-color;
   color: #dc0067;
 }
 .sidebar.right ul.sidebar-links li a {
-  padding: 15px;
+  padding: 7.5px;
   display: inline-block;
   text-decoration: none;
 }
@@ -175,7 +175,11 @@ body {
   color: #ff1080;
 }
 .sidebar.right ul.sidebar-links li.indent {
-  text-indent: 30px;
+  text-indent: 15px;
+}
+.sidebar.right ul.sidebar-links li.current_page_item {
+  background-color: rgba(239, 221, 21, 0.3);
+  font-weight: 900;
 }
 .sidebar.right ul.bottom {
   position: absolute;
