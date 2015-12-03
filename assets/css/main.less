@@ -28,7 +28,7 @@ body {
     min-height: 100%;
     display: flex;
     margin: 0;
-    background-color: @primary-bg;
+    background-color: fade(@primary-bg, 5%);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -128,13 +128,13 @@ body {
 
     ul.sidebar-links {
         list-style-type: none;
-        background-color: @sidebar-background;
         padding: 0;
         li {
             width: 100%;
             padding: 0 @sidebar-padding;
             transition-duration: @sidebar-hover-duration;
             transition-property: color, background-color;
+            background-color: @sidebar-background;
             color: @primary-fg;
             a {
                 padding: @sidebar-padding / 2;

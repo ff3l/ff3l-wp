@@ -22,7 +22,7 @@ body {
   min-height: 100%;
   display: flex;
   margin: 0;
-  background-color: rgba(179, 179, 179, 0.31);
+  background-color: rgba(179, 179, 179, 0.05);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -147,7 +147,6 @@ body {
 }
 .sidebar.right ul.sidebar-links {
   list-style-type: none;
-  background-color: rgba(111, 108, 108, 0.1);
   padding: 0;
 }
 .sidebar.right ul.sidebar-links li {
@@ -155,6 +154,7 @@ body {
   padding: 0 15px;
   transition-duration: 0.3s;
   transition-property: color, background-color;
+  background-color: rgba(111, 108, 108, 0.1);
   color: #dc0067;
 }
 .sidebar.right ul.sidebar-links li a {
