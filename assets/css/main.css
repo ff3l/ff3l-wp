@@ -225,6 +225,14 @@ body {
   color: #dc0067;
   min-height: 100%;
 }
+.banner {
+  top: 0px;
+  left: 0px;
+  height: 250px;
+  position: relative;
+  margin: -50px -50px 50px;
+  background: #abcdef none repeat scroll 0% 0%;
+}
 .post {
   background-color: rgba(255, 255, 255, 0.29);
   padding: 30px;
@@ -394,6 +402,9 @@ body {
     padding: 0 5px;
     min-height: auto;
   }
+  .banner {
+    display: none;
+  }
   .sidebar-link-container {
     padding-bottom: 100px;
   }
@@ -486,6 +497,9 @@ body {
   }
   .main {
     padding: 0 15px;
+  }
+  .banner {
+    margin-left: -15px;
   }
   .sidebar.right {
     z-index: 2019;
