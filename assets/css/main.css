@@ -195,7 +195,8 @@ body {
   color: #ff1080;
 }
 .sidebar.right ul.sidebar-links li.child {
-  padding-left: 30px;
+  width: calc(100% - 55px);
+  padding-left: 55px;
 }
 .sidebar.right ul.sidebar-links li.current_page_item {
   background-color: rgba(239, 221, 21, 0.3);
