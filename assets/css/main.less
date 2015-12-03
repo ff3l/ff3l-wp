@@ -1,8 +1,9 @@
 @import url("font-awesome.min.css");
 @import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
 
-@primary-bg: #fff;
+@primary-bg: rgba(179, 179, 179, 0.31);
 @primary-fg: #dc0067;
+@primary-overlay: rgba(255, 255, 255, 0.29);
 
 @sidebar-hover-duration: 0.3s;
 @sidebar-padding: 15px;
@@ -75,6 +76,7 @@ body {
     header {
         margin-right: 15px;
         padding: 10px;
+        padding-right: 30px;
         text-align: right;
         color: @primary-fg;
         a {
@@ -196,7 +198,7 @@ body {
 // \__|       \______/  \______/  \__|
 
 .post {
-    background-color: fade(@primary-bg, 30%);
+    background-color: @primary-overlay;
     padding: 30px;
     color: @primary-fg;
     margin-bottom: 30px;

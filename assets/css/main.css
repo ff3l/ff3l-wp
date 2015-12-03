@@ -22,7 +22,7 @@ body {
   min-height: 100%;
   display: flex;
   margin: 0;
-  background-color: #fff;
+  background-color: rgba(179, 179, 179, 0.31);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -101,6 +101,7 @@ body {
 .sidebar.left header {
   margin-right: 15px;
   padding: 10px;
+  padding-right: 30px;
   text-align: right;
   color: #dc0067;
 }
@@ -171,7 +172,7 @@ body {
 .sidebar.right ul.sidebar-links li:hover,
 .sidebar.right ul.sidebar-links li:focus,
 .sidebar.right ul.sidebar-links li:active {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(179, 179, 179, 0.4);
   color: #ff1080;
 }
 .sidebar.right ul.sidebar-links li.indent {
@@ -198,12 +199,12 @@ body {
   -moz-box-shadow: 0px 0px 30px 8px rgba(0, 0, 0, 0.45);
   box-shadow: 0px 0px 30px 8px rgba(0, 0, 0, 0.45);
   box-sizing: border-box;
-  background: rgba(179, 179, 179, 0.9);
+  background: rgba(102, 102, 102, 0.9);
   color: #dc0067;
   min-height: 100%;
 }
 .post {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.29);
   padding: 30px;
   color: #dc0067;
   margin-bottom: 30px;
@@ -248,7 +249,7 @@ body {
 .paginator-container .paginator li {
   padding: 20px;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(179, 179, 179, 0.3);
 }
 .paginator-container .paginator li:first-child {
   border-top-left-radius: 20px;
@@ -364,7 +365,7 @@ body {
   }
   .sidebar.right {
     position: static;
-    background-color: rgba(179, 179, 179, 0.9);
+    background-color: rgba(102, 102, 102, 0.9);
     color: #dc0067;
   }
   .main {
