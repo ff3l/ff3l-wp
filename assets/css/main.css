@@ -416,6 +416,9 @@ body {
   ul.sidebar-links li {
     padding: 0;
   }
+  ul.sidebar-links li.child {
+    padding: 15px;
+  }
   ul.bottom {
     margin-top: -100px !important;
     width: 100%  !important;
