@@ -414,10 +414,10 @@ body {
     padding-bottom: 100px;
   }
   ul.sidebar-links li {
-    padding: 0 !important;
+    padding-left: 0 !important;
   }
   ul.sidebar-links li.child {
-    padding: 15px !important;
+    padding-left: 15px !important;
   }
   ul.bottom {
     margin-top: -100px !important;
