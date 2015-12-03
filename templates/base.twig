@@ -72,8 +72,8 @@
             <a class="nav-main-link" href="{{item.get_link}}">{{item.title}}</a>
             {% if item.get_children %}
               {% for child in item.get_children %}
-                <li class="{{ item.classes | join(' ') }} child">
-                  <a href="{{child.get_link}}">{{child.title}}</a>
+                <li class="{{ child.classes | join(' ') }} child">
+                  <a href="{{ child.get_link }}">{{ child.title }}</a>
                 </li>
               {% endfor %}
             {% endif %}

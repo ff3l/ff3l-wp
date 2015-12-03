@@ -167,9 +167,6 @@ body {
   padding: 10px;
   font-size: 1.8em;
 }
-.sidebar.right ul.sidebar-links li .child {
-  text-indent: 30px;
-}
 .sidebar.right ul.sidebar-links li:hover,
 .sidebar.right ul.sidebar-links li:focus,
 .sidebar.right ul.sidebar-links li:active {
@@ -177,7 +174,7 @@ body {
   color: #ff1080;
 }
 .sidebar.right ul.sidebar-links li.child {
-  text-indent: 15px;
+  padding-left: 15px;
 }
 .sidebar.right ul.sidebar-links li.current_page_item {
   background-color: rgba(239, 221, 21, 0.3);
@@ -469,9 +466,8 @@ body {
   .sidebar.right {
     z-index: 2019;
     width: 30%;
-    position: fixed;
     bottom: 10px;
-    top: 50%;
+    top: 40%;
     height: inherit;
     min-height: inherit;
   }

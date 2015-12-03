@@ -146,9 +146,6 @@ body {
                     font-size: 1.8em;
                 }
             }
-            .child {
-                text-indent: 30px;
-            }
         }
         li:hover,
         li:focus,
@@ -157,7 +154,7 @@ body {
             color: lighten(@primary-fg, 10%);
         }
         li.child {
-            text-indent: 15px;
+            padding-left: 15px;
         }
         li.current_page_item {
             background-color: @sidebar-current-background;
@@ -424,9 +421,8 @@ body {
     .sidebar.right {
         z-index: 2019;
         width: 30%;
-        position: fixed;
         bottom: 10px;
-        top: 50%;
+        top: 40%;
         height: inherit;
         min-height: inherit;
         footer {
