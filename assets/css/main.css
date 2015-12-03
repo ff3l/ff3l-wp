@@ -176,6 +176,9 @@ body {
   background-color: rgba(179, 179, 179, 0.4);
   color: #ff1080;
 }
+.sidebar.right ul.sidebar-links li.child {
+  padding-left: 15px;
+}
 .sidebar.right ul.sidebar-links li.current_page_item {
   background-color: rgba(239, 221, 21, 0.3);
   font-weight: 900;
