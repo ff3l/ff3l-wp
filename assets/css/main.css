@@ -233,6 +233,11 @@ body {
   margin: -50px -50px 50px;
   background: #abcdef none repeat scroll 0% 0%;
 }
+.banner figure.item {
+  position: absolute;
+  margin: 0;
+  height: 250px;
+}
 .post {
   background-color: rgba(255, 255, 255, 0.29);
   padding: 30px;
