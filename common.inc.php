@@ -10,7 +10,8 @@ class Common {
 		}
 		$data['title'] = $data['name'] + " | " +
 					is_front_page() ? $data['description'] : wp_title('&raquo;', false);
-		$data['menu'] = new TimberMenu();
+		$data['menu'] = new TimberMenu('main');
+		$data['carousel'] = new TimberMenu('carousel');
 		$data['home'] = home_url('/');
 		$data['header'] = wp_head();
 		$data['footer'] = wp_footer();
