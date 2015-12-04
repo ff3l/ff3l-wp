@@ -33,35 +33,35 @@ class Common {
 		Timber::render("templates/$name.twig", $context);
 	}
 
-	public static function setup_admin_menu($wp_customize) {
-		$wp_customize->add_section(
-			'ff3l_footer_options',
-			array(
-				'title'       => __( 'Footer Settings', 'ff3l' ),
-				'priority'    => 100,
-				'capability'  => 'edit_theme_options',
-				'description' => __('Change footer options here.', 'ff3l'),
-			)
-		);
-		$wp_customize->add_setting( 'footer_bg_color',
-			array(
-				'default' => 'f1f1f1'
-			)
-		);
-		$wp_customize->add_control( new WP_Customize_Color_Control(
-			$wp_customize,
-			'footer_bg_color_control',
-			array(
-				'label'    => __( 'Footer Background Color', 'ff3l' ),
-				'section'  => 'ff3l_footer_options',
-				'settings' => 'footer_bg_color',
-				'priority' => 10,
-			)
-		));
-	}
-
 }
 
-add_action("customize_register", "Common::setup_admin_menu");
+add_action("customize_register", "setup_admin_menu");
+
+function setup_admin_menu($wp_customize) {
+	$wp_customize->add_section(
+		'ff3l_footer_options',
+		array(
+			'title'       => __( 'Footer Settings', 'ff3l' ),
+			'priority'    => 100,
+			'capability'  => 'edit_theme_options',
+			'description' => __('Change footer options here.', 'ff3l'),
+		)
+	);
+	$wp_customize->add_setting( 'footer_bg_color',
+		array(
+			'default' => 'f1f1f1'
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize,
+		'footer_bg_color_control',
+		array(
+			'label'    => __( 'Footer Background Color', 'ff3l' ),
+			'section'  => 'ff3l_footer_options',
+			'settings' => 'footer_bg_color',
+			'priority' => 10,
+		)
+	));
+}
 
 add_filter('timber_context', 'Common::populate_context');

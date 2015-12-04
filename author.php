@@ -1,5 +1,5 @@
 <?php
-require_once 'common.inc.php';
+require_once 'functions.php';
 $author = new TimberUser(intval($_GET['author']));
 Common::render("author", array(
   "author" => $author,
