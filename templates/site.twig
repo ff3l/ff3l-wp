@@ -4,10 +4,8 @@
   {% for item in carousel.get_items %}
   <figure class="item carousel-pic">
     <img src="{{ item.get_link }}" alt="{{ item.title }}" />
-    <span class="title">
-      <h1 class="{{ item.classes | join(' ') }}">{{ item.title }}</h1>
-      <h2 class="{{ item.classes | join(' ') }}">{{ item.description }}</h2>
-    </span>
+    <h1 class="{{ item.classes | join(' ') }}">{{ item.title }}</h1>
+    <h2 class="{{ item.classes | join(' ') }}">{{ item.description }}</h2>
   </figure>
   {% endfor %}
 </div>

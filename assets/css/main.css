@@ -240,7 +240,8 @@ body {
   min-width: 100%;
   height: auto;
 }
-.banner figure.item span {
+.banner figure.item h1,
+.banner figure.item h2 {
   position: absolute;
   top: 50px;
   z-index: 2147483647;
