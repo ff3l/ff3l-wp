@@ -47,6 +47,6 @@ class Common {
 
 }
 
-add_action("admin_menu", "Common::setup_admin_menu");
+add_action("customize_register", "Common::setup_admin_menu");
 
 add_filter('timber_context', 'Common::populate_context');
