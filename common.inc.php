@@ -33,8 +33,20 @@ class Common {
 		Timber::render("templates/$name.twig", $context);
 	}
 
+	public static function setup_admin_menu($wp_customize) {
+		$wp_customize->add_section(
+			'ff3l_banner_options',
+			array(
+				'title' => __( 'Banner Settings', 'ff3l' ),
+				'priority' => 100,
+				'capability' => 'edit_theme_options',
+				'description' => __('Change bannner options here.', 'ff3l'),
+			)
+		);
+	}
+
 }
 
-
+add_action("admin_menu", "Common::setup_admin_menu");
 
 add_filter('timber_context', 'Common::populate_context');

@@ -27,7 +27,9 @@
 @sidebar-padding: 15px;
 @sidebar-background: rgba(111, 108, 108, 0.1);
 @sidebar-current-background: rgba(239, 221, 21, 0.3);
-@main-shadow-hint: rgba(0, 0, 0, 0.45);
+@shadow-hint: rgba(0, 0, 0, 0.45);
+
+@carousel-height: 300px;
 
 html {
     margin: 0;
@@ -200,9 +202,9 @@ body {
 .main {
     z-index: 2020;
     padding: 50px;
-    -webkit-box-shadow: 0px 0px 30px 8px @main-shadow-hint;
-    -moz-box-shadow: 0px 0px 30px 8px @main-shadow-hint;
-    box-shadow: 0px 0px 30px 8px @main-shadow-hint;
+    -webkit-box-shadow: 0px 0px 30px 8px @shadow-hint;
+    -moz-box-shadow: 0px 0px 30px 8px @shadow-hint;
+    box-shadow: 0px 0px 30px 8px @shadow-hint;
     box-sizing: border-box;
     background: fade(@primary-bg, 31%);
     color: @primary-fg;
@@ -212,7 +214,7 @@ body {
 .banner {
     top: 0px;
     left: 0px;
-    height: 250px;
+    height: @carousel-height;
     position: relative;
     margin: -50px -50px 50px;
     // Just to test
@@ -220,7 +222,7 @@ body {
     figure.item {
         position: absolute;
         margin: 0;
-        height: 250px;
+        height: @carousel-height;
         img {
             min-width: 100%;
             height: auto;

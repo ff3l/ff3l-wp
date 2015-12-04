@@ -226,7 +226,7 @@ body {
 .banner {
   top: 0px;
   left: 0px;
-  height: 250px;
+  height: 300px;
   position: relative;
   margin: -50px -50px 50px;
   background: #abcdef none repeat scroll 0% 0%;
@@ -234,7 +234,7 @@ body {
 .banner figure.item {
   position: absolute;
   margin: 0;
-  height: 250px;
+  height: 300px;
 }
 .banner figure.item img {
   min-width: 100%;
