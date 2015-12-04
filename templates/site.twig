@@ -3,8 +3,9 @@
 {% block content %}
 <div class="banner gallery items-3 autoplay">
   {% for item in carousel.get_items %}
-  <figure class="item {{ item.classes | join(' ') }}">
+  <figure class="item carousel-pic">
     <img src="{{item.get_link}}" alt="{{item.title}}" />
+    <h1 class="{{ item.classes | join(' ') }}">{{item.title}}</h1>
   </figure>
   {% endfor %}
 </div>
