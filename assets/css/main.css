@@ -249,6 +249,9 @@ body {
   padding: 10px;
   background: rgba(255, 255, 255, 0.29);
 }
+.banner figure.item h2 {
+  top: 150px;
+}
 .post {
   background-color: rgba(255, 255, 255, 0.29);
   padding: 30px;

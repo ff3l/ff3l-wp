@@ -4,8 +4,12 @@
   {% for item in carousel.get_items %}
   <figure class="item carousel-pic">
     <img src="{{ item.get_link }}" alt="{{ item.title }}" />
-    <h1 class="{{ item.classes | join(' ') }}">{{ item.title }}</h1>
-    <h2 class="{{ item.classes | join(' ') }}">{{ item.description }}</h2>
+    {% if item.title is not empty %}
+      <h1 class="{{ item.classes | join(' ') }}">{{ item.title }}</h1>
+    {% endif %}
+    {% if item.description is not empty %}
+      <h2 class="{{ item.classes | join(' ') }}">{{ item.description }}</h2>
+    {% endif %}
   </figure>
   {% endfor %}
 </div>
