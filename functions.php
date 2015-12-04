@@ -47,26 +47,11 @@ function setup_admin_menu($wp_customize) {
 			'description' => __('Change carousel options here.', 'ff3l'),
 		)
 	);
-	$wp_customize->add_setting( 'carousel_fg_color',
-		array(
-			'default' => 'dc0067'
-		)
-	);
 	$wp_customize->add_setting( 'carousel_height',
 		array(
-			'default' => '250'
+			'default' => 250
 		)
 	);
-	$wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize,
-		'carousel_fg_color_control',
-		array(
-			'label'    => __( 'Carousel Font Color', 'ff3l' ),
-			'section'  => 'ff3l_carousel_options',
-			'settings' => 'carousel_fg_color',
-			'priority' => 10,
-		)
-	));
 	$wp_customize->add_control( new WP_Customize_Control(
 		$wp_customize,
 		'carousel_height_control',
