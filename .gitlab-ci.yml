@@ -1,0 +1,11 @@
+before_script:
+  - uname -a
+  - npm install
+  
+build:
+  script:
+    - grunt
+
+artifacts:
+  paths:
+    - /
