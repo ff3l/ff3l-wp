@@ -2,12 +2,12 @@ before_script:
   - uname -a
   - whoami
   - sudo apt-get update -qq && sudo apt-get install -y -qq nodejs nodejs-legacy npm
-  - sudo npm install -g grunt
+  - sudo npm install -g grunt-cli
   - npm install
 
 build:
   script:
-    - /usr/local/bin/grunt
+    - grunt
   artifacts:
     paths:
       - /
