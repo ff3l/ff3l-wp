@@ -1,5 +1,7 @@
 before_script:
   - uname -a
+  - apt-get update -qq && apt-get install -y -qq nodejs nodejs-legacy npm
+  - npm install -g grunt
   - npm install
 
 build:
