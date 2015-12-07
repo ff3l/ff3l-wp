@@ -7,7 +7,7 @@ before_script:
 
 build:
   script:
-    - grunt
+    - /usr/local/bin/grunt
   artifacts:
     paths:
       - /
