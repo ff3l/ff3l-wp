@@ -9,5 +9,3 @@ build:
   script:
     - grunt
   artifacts:
-    paths:
-      - /
