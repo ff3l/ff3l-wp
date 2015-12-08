@@ -4,11 +4,11 @@
   <div class="post">
     <div class="post-header">
       <h2>{{ post.post_title }}</h2>
-      <a class="post-author" href="{{ post.author.link }}">
-        <h4 class="sub">{{ post.author.name }}</h4>
-      </a>
     </div>
     {{ post.content }}
+    <a class="post-author" href="{{ post.author.link }}">
+      <h4 class="sub">{{ post.author.name }}</h4>
+    </a>
   </div>
   <div class="post comment-container">
     <h4>Comments:</h4>
