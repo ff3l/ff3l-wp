@@ -5,13 +5,16 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-cssmin": "^0.14.0",
-    "grunt-contrib-less": "^1.0.1"
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-phplint": "0.0.6"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt"
   },
   "keywords": [
-    "wordpress", "freifunk", "gluon"
+    "wordpress",
+    "freifunk",
+    "gluon"
   ],
   "repository": "https://git.beryju.org/jens/ff3l-wp",
   "author": "Jens <jens@beryju.org> (BeryJu)",

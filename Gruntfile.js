@@ -4,21 +4,25 @@ module.exports = function(grunt) {
     less: {
       build: {
         files: {
-          'assets/css/main.css': 'assets/css/main.less'
+          'assets/css/ff3l.css': 'assets/css/ff3l.less'
         }
       },
     },
     cssmin: {
       css: {
         files: {
-          'assets/css/main.min.css': ['assets/css/main.css']
+          'assets/css/ff3l.min.css': ['assets/css/ff3l.css']
         }
       }
     },
+    phplint: {
+      theme: ['*.php']
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks("grunt-phplint");
 
-  grunt.registerTask('default', ['less', 'cssmin']);
+  grunt.registerTask('default', ['less', 'cssmin', 'phplint']);
 };
