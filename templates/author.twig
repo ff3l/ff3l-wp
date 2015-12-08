@@ -12,7 +12,21 @@
       </div>
     </div>
     <div class="author-body">
-      TODO: Put something here
+      <div class="author-bio">
+        {{ author.get_field('description') }}
+      </div>
+      <div class="author-posts">
+        {% for post in author_posts %}
+          <div class="post">
+            <div class="post-header">
+              <h2>{{ post.post_title }}</h2>
+            </div>
+            <p>
+              {{ post.get_preview(10) }}
+            </p>
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 {% endblock %}
