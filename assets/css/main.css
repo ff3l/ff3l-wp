@@ -286,6 +286,9 @@ body {
   width: calc(20%);
   margin-left: 60px;
 }
+.author .author-body {
+  margin-top: 50px;
+}
 .paginator-container {
   display: flex;
   justify-content: space-around;
