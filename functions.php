@@ -19,7 +19,7 @@ class Common {
 	}
 
 	public static function get_gravatar( $email ) {
-		return get_avatar($email, 150)
+		return get_avatar($email, 150);
 	}
 
 	public static function render($name, $args = array()) {
