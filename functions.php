@@ -18,8 +18,8 @@ class Common {
 		return $data;
 	}
 
-	public static function get_gravatar_url( $email ) {
-		return '//gravatar.com/avatar/' . md5( strtolower( trim ( $email ) ) );
+	public static function get_gravatar( $email ) {
+		return get_avatar($email, 150)
 	}
 
 	public static function render($name, $args = array()) {
