@@ -1,5 +1,5 @@
 <?php
 require_once 'functions.php';
-Common::render("site", array(
+Common::render("site-front", array(
 	"post" => new TimberPost()
 	));
