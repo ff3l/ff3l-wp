@@ -290,6 +290,9 @@ body {
 .author .author-body {
   margin-top: 50px;
 }
+.author .author-body h1 {
+  text-align: center;
+}
 .paginator-container {
   display: flex;
   justify-content: space-around;
