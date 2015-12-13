@@ -9,3 +9,4 @@ build:
   script:
     - grunt
   artifacts:
+    - theme/
