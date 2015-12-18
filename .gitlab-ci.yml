@@ -3,11 +3,7 @@ before_script:
   - whoami
   - "sudo apt-get update -qq && sudo apt-get install -y -qq nodejs nodejs-legacy npm php5-cli"
   - "sudo npm install -g grunt-cli"
-  - "cd theme/"
   - "npm install"
 build:
   script:
     - grunt
-  artifacts:
-    paths:
-      - theme/
