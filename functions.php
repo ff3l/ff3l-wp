@@ -13,8 +13,6 @@ class Common {
 		$data['menu'] = new TimberMenu('main');
 		$data['carousel'] = new TimberMenu('carousel');
 		$data['home'] = home_url('/');
-		$data['header'] = wp_head();
-		$data['footer'] = wp_footer();
 		return $data;
 	}
 
@@ -24,6 +22,7 @@ class Common {
 
 	public static function render($name, $args = array()) {
 		$context = Timber::get_context();
+		print_r($context);
 		$context['site'] = Common::populate_context();
 		$context['posts'] = Timber::get_posts();
 		$context['pagination'] = Timber::get_pagination();
