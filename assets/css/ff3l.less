@@ -27,6 +27,7 @@
 
 @sidebar-hover-duration: 0.3s;
 @sidebar-padding: 15px;
+@sidebar-indent: 15px;
 @sidebar-background: rgba(111, 108, 108, 0.1);
 @sidebar-current-background: rgba(239, 221, 21, 0.3);
 @shadow-hint: rgba(0, 0, 0, 0.45);
@@ -156,6 +157,7 @@ body {
         li {
             width: ~"calc(100% - 45px)";
             padding: 0 @sidebar-padding;
+            padding-left: @sidebar-indent;
             padding-left: 45px;
             transition-duration: @sidebar-hover-duration;
             transition-property: color, background-color;
@@ -179,9 +181,8 @@ body {
             color: lighten(@primary-fg, 10%);
         }
         li.child {
-            padding-left: 55px;
             width: ~"calc(100% - 55px)";
-            padding-left: 55px;
+            padding-left: @sidebar-indent * 3;
         }
         li.current_page_item {
             background-color: @sidebar-current-background;
@@ -424,19 +425,17 @@ body {
     ul.sidebar-links {
         li {
             width: 100% !important;
-            padding-left: 5px !important;
         }
         li.child {
             width: 100% !important;
-            padding-left: 15px !important;
         }
     }
 
     ul.bottom {
-        margin-top: -100px  !important;
-        width: 100%  !important;
-        text-align: center  !important;
-        bottom: auto  !important;
+        margin-top: -100px !important;
+        width: 100% !important;
+        text-align: center !important;
+        bottom: auto !important;
         position: static !important;
     }
 
@@ -508,16 +507,6 @@ body {
                 margin-right: 10px;
                 input[type=text] {
                     margin-right: -30px;
-                }
-            }
-            ul.sidebar-links {
-                li {
-                    width: ~"calc(100% - 5px)";
-                    padding-left: 5px !important;
-                }
-                li.child {
-                    width: ~"calc(100% - 15px)";
-                    padding-left: 15px !important;
                 }
             }
             ul.bottom {
