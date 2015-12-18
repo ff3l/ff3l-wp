@@ -13,8 +13,8 @@ class Common {
 		$data['menu'] = new TimberMenu('main');
 		$data['carousel'] = new TimberMenu('carousel');
 		$data['home'] = home_url('/');
-		$data['header'] = TimberHelper::function_wrapper( 'wp_head' );
-		$data['footer'] = TimberHelper::function_wrapper( 'wp_footer' );
+		$data['header'] = new TimberFunctionWrapper('wp_head', array(), true);
+		$data['footer'] = new TimberFunctionWrapper('wp_footer', array(), true);
 		return $data;
 	}
 
