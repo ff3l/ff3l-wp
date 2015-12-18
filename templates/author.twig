@@ -1,0 +1,39 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+  <div class="author">
+    <div class="author-header">
+      <div class="author-avatar">
+        {{ author_avatar }}
+      </div>
+      <div class="author-name">
+        <h2>{{ author.nickname }}</h2>
+        <h3 class="sub">{{ author.first_name }} {{ author.last_name }}</h3>
+      </div>
+    </div>
+    <div class="author-body">
+      <div class="author-bio">
+        <div class="post">
+          <div class="post-header">
+            {# TRANSLATE #}
+            <h1>Biographie</h1>
+          </div>
+          <p>
+            {{ author_bio }}
+          </p>
+        </div>
+      </div>
+      <div class="author-posts">
+        {# TRANSLATE #}
+        <h1>Beiträge</h1>
+        {% for post in author_posts %}
+          <div class="post">
+            <div class="post-header">
+              <h2>{{ post.post_title }}</h2>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
