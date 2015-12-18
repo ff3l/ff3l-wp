@@ -12,7 +12,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="#C30062">
   <link rel="icon" sizes="192x192" href="{{ site.template_url }}/assets/images/logo_192.png">
   <link rel="stylesheet" href="{{ site.template_url }}/assets/css/ff3l.min.css" />
-  {{ header }}
+  {{ site.wp_head }}
 </head>
 <body>
   <div class="sidebar left w20 sw100 mw30">
@@ -96,7 +96,7 @@
       </ul>
       {% endblock %}
     </footer>
-    {{wp_footer}}
+    {{ site.wp_footer}}
   </div>
   {% block scripts %}{% endblock %}
 </body>
