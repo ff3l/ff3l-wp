@@ -26,7 +26,6 @@
 @primary-text: #000;
 
 @sidebar-hover-duration: 0.3s;
-@sidebar-padding: 15px;
 @sidebar-indent: 15px;
 @sidebar-background: rgba(111, 108, 108, 0.1);
 @sidebar-current-background: rgba(239, 221, 21, 0.3);
@@ -156,15 +155,16 @@ body {
         padding: 0;
         li {
             width: ~"calc(100% - 45px)";
-            padding: 0 @sidebar-padding;
+            padding: 0;
             padding-left: @sidebar-indent;
+            padding-right: -@sidebar-indent;
             transition-duration: @sidebar-hover-duration;
             transition-property: color, background-color;
             background-color: @sidebar-background;
             color: @primary-fg;
             a {
                 font-family: "Raleway";
-                padding: @sidebar-padding / 2;
+                padding: @sidebar-indent / 2;
                 display: inline-block;
                 text-decoration: none;
                 span.icon {
@@ -182,6 +182,7 @@ body {
         li.child {
             width: ~"calc(100% - 55px)";
             padding-left: calc(@sidebar-indent * 3);
+            padding-right: - calc(@sidebar-indent * 3);
         }
         li.current_page_item {
             background-color: @sidebar-current-background;
