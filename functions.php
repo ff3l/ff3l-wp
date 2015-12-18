@@ -22,7 +22,7 @@ class Common {
 
 	public static function render($name, $args = array()) {
 		$context = Timber::get_context();
-		print_r($context);
+		echo json_encode($context);
 		$context['site'] = Common::populate_context();
 		$context['posts'] = Timber::get_posts();
 		$context['pagination'] = Timber::get_pagination();
