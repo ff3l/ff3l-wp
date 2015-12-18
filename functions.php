@@ -3,6 +3,14 @@ class Common {
 
 	public static $BLOGINFO_FIELDS = array("name","description","wpurl","url","admin_email","charset","version","html_type","language","stylesheet_url","stylesheet_directory","template_url","pingback_url","atom_url","rdf_url","rss_url","rss2_url","comments_atom_url","comments_rss2_url");
 
+	public static function capture_out($function) {
+		ob_start();
+		$function();
+		$data = ob_get_contents();
+		ob_end_clean();
+		return $data;
+	}
+
 	public static function populate_context() {
 		$data = array();
 		foreach (Common::$BLOGINFO_FIELDS as $key) {
@@ -13,8 +21,8 @@ class Common {
 		$data['menu'] = new TimberMenu('main');
 		$data['carousel'] = new TimberMenu('carousel');
 		$data['home'] = home_url('/');
-		$data['header'] = new TimberFunctionWrapper('wp_head', array(), true);
-		$data['footer'] = new TimberFunctionWrapper('wp_footer', array(), true);
+		$data['header'] = Common::capture_out(function () { wp_head(); });
+		$data['footer'] = Common::capture_out(function () { wp_footer(); });
 		return $data;
 	}
 
