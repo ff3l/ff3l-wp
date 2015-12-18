@@ -1,0 +1,11 @@
+Source: wordpress-theme-ff3l
+Section: devel
+Priority: optional
+Maintainer: Jens (BeryJu) Langhammer <jens@beryju.org>
+Build-Depends: debhelper (>> 5.0.0)
+Standards-Version: 3.7.2
+
+Package: wordpress-theme-ff3l
+Architecture: all
+Depends: wordpress
+Description: Wordpress Theme for FF3L
