@@ -1,3 +1,11 @@
+wordpress-theme-ff3l (1.0.2) stable; urgency=medium
+
+  * Unified Sidebar indents
+  * Chrome Tab Color
+  * Fixed horizontal scrolling on mobile (sidebar looks decent now)
+
+ -- Jens Langhammer (BeryJu) <jens@levante.de>  Fri, 18 Dec 2015 14:18:37 +0100
+
 wordpress-theme-ff3l (1.0.1) stable; urgency=medium
 
   * Fixed gitlab-ci
