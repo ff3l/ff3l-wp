@@ -197,7 +197,7 @@ body {
   color: #ff1080;
 }
 .sidebar.right ul.sidebar-links li.child {
-  width: calc(100% -  calc(45px) );
+  width: calc(100% -  45px );
   padding-left: calc(45px);
   padding-right: - calc(45px);
 }
@@ -429,9 +429,6 @@ body {
   .main {
     padding: 0 5px;
     min-height: auto;
-  }
-  .banner {
-    display: none;
   }
   .sidebar-link-container {
     padding-bottom: 100px;

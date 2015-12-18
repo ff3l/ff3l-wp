@@ -180,7 +180,7 @@ body {
             color: lighten(@primary-fg, 10%);
         }
         li.child {
-            width: ~"calc(100% - " calc(@sidebar-indent * 3)~")";
+            width: ~"calc(100% - " @sidebar-indent * 3 ~")";
             padding-left: calc(@sidebar-indent * 3);
             padding-right: - calc(@sidebar-indent * 3);
         }
@@ -414,9 +414,9 @@ body {
         min-height: auto;
     }
 
-    .banner {
-        display: none;
-    }
+    // .banner {
+    //     display: none;
+    // }
 
     .sidebar-link-container {
         padding-bottom: 100px;
