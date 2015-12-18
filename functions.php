@@ -22,6 +22,7 @@ class Common {
 		$data['carousel'] = new TimberMenu('carousel');
 		$data['home'] = home_url('/');
 		$data['header'] = Common::capture_out(function () { wp_head(); });
+		echo $data['header'];
 		$data['footer'] = Common::capture_out(function () { wp_footer(); });
 		return $data;
 	}
