@@ -430,6 +430,9 @@ body {
     padding: 0 5px;
     min-height: auto;
   }
+  .banner {
+    display: none;
+  }
   .sidebar-link-container {
     padding-bottom: 100px;
   }
