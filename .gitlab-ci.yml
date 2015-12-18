@@ -6,6 +6,8 @@ before_script:
   - "cd theme/"
   - "npm install"
 build:
+  only:
+    - /^master$/
   script:
     - grunt
   artifacts:
