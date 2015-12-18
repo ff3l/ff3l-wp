@@ -4,19 +4,19 @@ module.exports = function(grunt) {
     less: {
       build: {
         files: {
-          'theme/assets/css/ff3l.css': 'theme/assets/css/ff3l.less'
+          'assets/css/ff3l.css': 'assets/css/ff3l.less'
         }
       },
     },
     cssmin: {
       css: {
         files: {
-          'theme/assets/css/ff3l.min.css': ['theme/assets/css/ff3l.css']
+          'assets/css/ff3l.min.css': ['assets/css/ff3l.css']
         }
       }
     },
     phplint: {
-      theme: ['theme/*.php']
+      theme: ['*.php']
     }
   });
 
