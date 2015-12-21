@@ -23,7 +23,15 @@ class Common {
 		$data['home'] = home_url('/');
 		$data['header'] = Common::capture_out(function () { wp_head(); });
 		$data['footer'] = Common::capture_out(function () { wp_footer(); });
+		$data['debug'] = populate_debug();
 		return $data;
+	}
+
+	public static function populate_debug() {
+		$data = array();
+		$data['file'] = debug_backtrace()[1]['file']);
+
+		return json_encode($data);
 	}
 
 	public static function get_gravatar( $email ) {
