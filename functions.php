@@ -13,8 +13,8 @@ class Common {
 
 	public static function populate_debug() {
 		$data = array();
-		$data['file'] = debug_backtrace()[1]['file'];
-
+		// $data['file'] = debug_backtrace()[1]['file'];
+		$data['host'] = gethostbyname();
 		return json_encode($data);
 	}
 
