@@ -38,11 +38,13 @@ class Common {
 		return get_avatar($email, 134);
 	}
 
-	public static function render($name, $args = array()) {
+	public static function render($name, $pagination = false, $args = array()) {
 		$context = Timber::get_context();
 		$context['site'] = Common::populate_context();
 		$context['posts'] = Timber::get_posts();
-		$context['pagination'] = Timber::get_pagination();
+		if ($pagination == true) {
+			$context['pagination'] = Timber::get_pagination();
+		}
 		foreach ($args as $key => $value) {
 			$context[$key] = $value;
 		}
