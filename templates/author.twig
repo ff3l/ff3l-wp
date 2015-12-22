@@ -16,7 +16,8 @@
         <div class="author-bio">
           <div class="post">
             <div class="post-header">
-              <h1>{% trans "Biography" %}</h1>
+             {# TRANSLATE #}
+             <h1>Biographie</h1>
             </div>
             <p>
               {{ author_bio }}
@@ -25,7 +26,8 @@
         </div>
       {% endif %}
       <div class="author-posts">
-        <h1>{% trans "Posts" %}</h1>
+        {# TRANSLATE #}
+        <h1>Beitr&auml;ge</h1>
           <div class="post">
             <div class="post-header">
               {% for post in author_posts %}

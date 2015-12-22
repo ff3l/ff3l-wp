@@ -11,12 +11,14 @@
     </a>
   </div>
   <div class="post comment-container">
-    <h4>{% trans "Comments:" %}</h4>
+    {# TRANSLATE #}
+    <h4>Kommentare</h4>
     {% for comment in post.comments %}
-        <div class="comment comment-order-{{loop.index}}">
-            <h5>{{comment.author.name}} said:</h5>
-            <p>{{comment.content}}</p>
-        </div>
+      <div class="comment comment-order-{{loop.index}}">
+        {# TRANSLATE #}
+        <h5>{{comment.author.name}} sagt:</h5>
+        <p>{{comment.content}}</p>
+      </div>
     {% endfor %}
   </div>
 {% endblock %}
