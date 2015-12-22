@@ -13,13 +13,11 @@
     </div>
     <div class="author-body">
       {% if author_bio %}
-        <div class="author-bio">
-         {# TRANSLATE #}
-         <h1>Biographie</h1>
+        <div class="author-posts">
+          {# TRANSLATE #}
+          <h1>Biographie</h1>
           <div class="post">
-            <p>
-              {{ author_bio }}
-            </p>
+            {{ author_bio }}
           </div>
         </div>
       {% endif %}
