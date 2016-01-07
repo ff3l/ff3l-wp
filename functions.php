@@ -53,6 +53,7 @@ class Common {
 
 }
 
+add_theme_support( 'post-thumbnails' );
 add_action("customize_register", "setup_admin_menu");
 
 function setup_admin_menu($wp_customize) {

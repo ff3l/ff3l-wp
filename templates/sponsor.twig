@@ -1,0 +1,19 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+{% for post in posts %}
+  <div class="sponsor">
+    <div class="post-thumbmail">
+      <img src="{{ post.get_thumbnail.get_src }}" />
+    </div>
+    <div class="post">
+      <div class="post-header">
+        <h2>{{ post.post_title }}</h2>
+      </div>
+      <p>
+        {{ post.get_preview(200) }}
+      </p>
+    </div>
+  </div>
+{% endfor %}
+{% endblock %}
