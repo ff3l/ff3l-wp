@@ -1,24 +1,31 @@
 {% extends "templates/base.twig" %}
 
 {% block content %}
-  <div class="post">
-    <div class="post-header">
-      <h2>{{ post.post_title }}</h2>
-    </div>
-    {{ post.content }}
-    <a class="post-author" href="{{ post.author.link }}">
-      <h4 class="sub">{{ post.author.name }}</h4>
-    </a>
-  </div>
-  <div class="post comment-container">
-    {# TRANSLATE #}
-    <h4>Kommentare</h4>
-    {% for comment in post.comments %}
-      <div class="comment comment-order-{{loop.index}}">
-        {# TRANSLATE #}
-        <h5>{{comment.author.name}} sagt:</h5>
-        <p>{{comment.content}}</p>
+  <div class="post-container">
+    <div class="post">
+      <div class="post-header">
+        <h2>
+          {{ post.post_title }}
+          {% if post.can_edit %}
+              <a href="{{post.edit_link}}">Bearbeiten</a>
+          {% endif %}
+        </h2>
       </div>
-    {% endfor %}
+      {{ post.content }}
+      <a class="post-author" href="{{ post.author.link }}">
+        <h4 class="sub">{{ post.author.name }}</h4>
+      </a>
+    </div>
+    <div class="post comment-container">
+      {# TRANSLATE #}
+      <h4>Kommentare</h4>
+      {% for comment in post.comments %}
+        <div class="comment comment-order-{{loop.index}}">
+          {# TRANSLATE #}
+          <h5>{{comment.author.name}} sagt:</h5>
+          <p>{{comment.content}}</p>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 {% endblock %}
