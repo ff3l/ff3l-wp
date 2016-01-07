@@ -2,5 +2,6 @@
 require_once 'functions.php';
 $context = Timber::get_context();
 $context['site'] = Common::populate_context();
-$context['posts'] = shuffle(Timber::get_posts());
+$posts = Timber::get_posts();
+$context['posts'] = shuffle($posts);
 Timber::render("templates/sponsor.twig", $context);
