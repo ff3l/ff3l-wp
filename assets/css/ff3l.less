@@ -252,31 +252,7 @@ body {
 // $$ |       $$$$$$  |\$$$$$$  | $$ |
 // \__|       \______/  \______/  \__|
 
-.post {
-    background-color: @primary-overlay;
-    padding: 30px;
-    color: @primary-text;
-    margin-bottom: 30px;
-    border-radius: 5px;
-    .post-header {
-        display: flex;
-        justify-content: space-between;
-        a.post-author {
-            text-decoration: none;
-            text-align: right;
-            margin-top: 10px;
-        }
-    }
-}
-
-.comment-container {
-    .comment {
-        padding: 10px 30px 15px;
-        background: rgba(1, 1, 1, .1);
-    }
-}
-
-.sponsor {
+.post-container {
     display: flex;
     .post-thumbmail {
         width: 30%;
@@ -287,6 +263,29 @@ body {
             width: 100%;
             vertical-align: middle;
         }
+    }
+    .post {
+        background-color: @primary-overlay;
+        padding: 30px;
+        color: @primary-text;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        .post-header {
+            display: flex;
+            justify-content: space-between;
+            a.post-author {
+                text-decoration: none;
+                text-align: right;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.comment-container {
+    .comment {
+        padding: 10px 30px 15px;
+        background: rgba(1, 1, 1, .1);
     }
 }
 

@@ -253,18 +253,31 @@ body {
 .banner figure.item h2 {
   top: 150px;
 }
-.post {
+.post-container {
+  display: flex;
+}
+.post-container .post-thumbmail {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post-container .post-thumbmail img {
+  width: 100%;
+  vertical-align: middle;
+}
+.post-container .post {
   background-color: rgba(255, 255, 255, 0.29);
   padding: 30px;
   color: #000;
   margin-bottom: 30px;
   border-radius: 5px;
 }
-.post .post-header {
+.post-container .post .post-header {
   display: flex;
   justify-content: space-between;
 }
-.post .post-header a.post-author {
+.post-container .post .post-header a.post-author {
   text-decoration: none;
   text-align: right;
   margin-top: 10px;
@@ -272,19 +285,6 @@ body {
 .comment-container .comment {
   padding: 10px 30px 15px;
   background: rgba(1, 1, 1, 0.1);
-}
-.sponsor {
-  display: flex;
-}
-.sponsor .post-thumbmail {
-  width: 30%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.sponsor .post-thumbmail img {
-  width: 100%;
-  vertical-align: middle;
 }
 .author {
   padding: 30px;
