@@ -1,0 +1,15 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+  <div class="post">
+    <div class="post-header">
+      <h2>
+        {{ post.post_title }}
+        {% if post.can_edit %}
+            <a href="{{post.edit_link}}">Bearbeiten</a>
+        {% endif %}
+      </h2>
+    </div>
+    {{ post.content }}
+  </div>
+{% endblock %}

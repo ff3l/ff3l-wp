@@ -1,0 +1,9 @@
+before_script:
+  - "uname -a"
+  - whoami
+  - "sudo apt-get update -qq && sudo apt-get install -y -qq nodejs nodejs-legacy npm php5-cli"
+  - "sudo npm install -g grunt-cli"
+  - "npm install"
+build:
+  script:
+    - grunt
