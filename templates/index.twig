@@ -10,7 +10,12 @@
     {% endif %}
     <div class="post">
       <div class="post-header">
-        <h2>{{ post.post_title }}</h2>
+        <h2>
+          {{ post.post_title }}
+          {% if post.can_edit %}
+              <a href="{{post.edit_link}}">Bearbeiten</a>
+          {% endif %}
+        </h2>
         <a class="post-author" href="{{ post.author.link }}">
           <h4 class="sub">{{ post.author.name }}</h4>
         </a>
