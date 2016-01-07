@@ -255,22 +255,22 @@ body {
 }
 .post-container {
   display: flex;
+  margin-bottom: 30px;
 }
 .post-container .post-thumbmail {
   width: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 5px;
 }
 .post-container .post-thumbmail img {
   width: 100%;
-  vertical-align: middle;
 }
 .post-container .post {
   background-color: rgba(255, 255, 255, 0.29);
   padding: 30px;
   color: #000;
-  margin-bottom: 30px;
   border-radius: 5px;
 }
 .post-container .post .post-header {
