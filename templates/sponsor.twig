@@ -1,0 +1,21 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+{% for post in posts %}
+  <div class="post-container">
+    {% if post.get_thumbnail.get_src is not empty %}
+    <div class="post-thumbmail">
+      <img src="{{ post.get_thumbnail.get_src }}" />
+    </div>
+    {% endif %}
+    <div class="post">
+      <div class="post-header">
+        <h2>{{ post.post_title }}</h2>
+      </div>
+      <p>
+        {{ post.content }}
+      </p>
+    </div>
+  </div>
+{% endfor %}
+{% endblock %}

@@ -3,6 +3,21 @@ class Common {
 
 	public static $BLOGINFO_FIELDS = array("name","description","wpurl","url","admin_email","charset","version","html_type","language","stylesheet_url","stylesheet_directory","template_url","pingback_url","atom_url","rdf_url","rss_url","rss2_url","comments_atom_url","comments_rss2_url");
 
+	public static function capture_out($function) {
+		ob_start();
+		$function();
+		$data = ob_get_contents();
+		ob_end_clean();
+		return $data;
+	}
+
+	public static function populate_debug() {
+		$data = array();
+		// $data['file'] = debug_backtrace()[1]['file'];
+		$data['host'] = gethostname();
+		return json_encode($data);
+	}
+
 	public static function populate_context() {
 		$data = array();
 		foreach (Common::$BLOGINFO_FIELDS as $key) {
@@ -13,8 +28,9 @@ class Common {
 		$data['menu'] = new TimberMenu('main');
 		$data['carousel'] = new TimberMenu('carousel');
 		$data['home'] = home_url('/');
-		$data['header'] = wp_head();
-		$data['footer'] = wp_footer();
+		$data['header'] = Common::capture_out(function () { wp_head(); });
+		$data['footer'] = Common::capture_out(function () { wp_footer(); });
+		$data['debug'] = Common::populate_debug();
 		return $data;
 	}
 
@@ -22,11 +38,13 @@ class Common {
 		return get_avatar($email, 134);
 	}
 
-	public static function render($name, $args = array()) {
+	public static function render($name, $pagination = false, $args = array()) {
 		$context = Timber::get_context();
 		$context['site'] = Common::populate_context();
 		$context['posts'] = Timber::get_posts();
-		$context['pagination'] = Timber::get_pagination();
+		if ($pagination == true) {
+			$context['pagination'] = Timber::get_pagination();
+		}
 		foreach ($args as $key => $value) {
 			$context[$key] = $value;
 		}
@@ -35,6 +53,7 @@ class Common {
 
 }
 
+add_theme_support( 'post-thumbnails' );
 add_action("customize_register", "setup_admin_menu");
 
 function setup_admin_menu($wp_customize) {

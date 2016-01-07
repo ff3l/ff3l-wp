@@ -1,3 +1,3 @@
 <?php
 require_once 'functions.php';
-Common::render("index");
+Common::render("index", true);

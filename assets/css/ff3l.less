@@ -26,7 +26,7 @@
 @primary-text: #000;
 
 @sidebar-hover-duration: 0.3s;
-@sidebar-padding: 15px;
+@sidebar-indent: 15px;
 @sidebar-background: rgba(111, 108, 108, 0.1);
 @sidebar-current-background: rgba(239, 221, 21, 0.3);
 @shadow-hint: rgba(0, 0, 0, 0.45);
@@ -154,16 +154,16 @@ body {
         list-style-type: none;
         padding: 0;
         li {
-            width: ~"calc(100% - 45px)";
-            padding: 0 @sidebar-padding;
-            padding-left: 45px;
+            width: ~"calc(100% - "@sidebar-indent~")";
+            padding: 0;
+            padding-left: @sidebar-indent;
             transition-duration: @sidebar-hover-duration;
             transition-property: color, background-color;
             background-color: @sidebar-background;
             color: @primary-fg;
             a {
                 font-family: "Raleway";
-                padding: @sidebar-padding / 2;
+                padding: @sidebar-indent / 2;
                 display: inline-block;
                 text-decoration: none;
                 span.icon {
@@ -179,9 +179,9 @@ body {
             color: lighten(@primary-fg, 10%);
         }
         li.child {
-            padding-left: 55px;
-            width: ~"calc(100% - 55px)";
-            padding-left: 55px;
+            // ugh god this is so awful
+            width: ~"calc(100% - " @sidebar-indent * 3 ~")";
+            padding-left: calc(@sidebar-indent * 3);
         }
         li.current_page_item {
             background-color: @sidebar-current-background;
@@ -252,19 +252,32 @@ body {
 // $$ |       $$$$$$  |\$$$$$$  | $$ |
 // \__|       \______/  \______/  \__|
 
-.post {
-    background-color: @primary-overlay;
-    padding: 30px;
-    color: @primary-text;
+.post-container {
+    display: flex;
     margin-bottom: 30px;
-    border-radius: 5px;
-    .post-header {
+    .post-thumbmail {
+        width: 30%;
         display: flex;
         justify-content: space-between;
-        a.post-author {
-            text-decoration: none;
-            text-align: right;
-            margin-top: 10px;
+        align-items: center;
+        margin-right: 5px;
+        img {
+            width: 100%;
+        }
+    }
+    .post {
+        background-color: @primary-overlay;
+        padding: 30px;
+        color: @primary-text;
+        border-radius: 5px;
+        .post-header {
+            display: flex;
+            justify-content: space-between;
+            a.post-author {
+                text-decoration: none;
+                text-align: right;
+                margin-top: 10px;
+            }
         }
     }
 }
@@ -417,24 +430,10 @@ body {
         display: none;
     }
 
-    .sidebar-link-container {
-        padding-bottom: 100px;
-    }
-
-    ul.sidebar-links {
-        li {
-            padding-left: 5px !important;
-        }
-        li.child {
-            padding-left: 15px !important;
-        }
-    }
-
     ul.bottom {
-        margin-top: -100px  !important;
-        width: 100%  !important;
-        text-align: center  !important;
-        bottom: auto  !important;
+        width: 100% !important;
+        text-align: center !important;
+        bottom: auto !important;
         position: static !important;
     }
 
@@ -506,16 +505,6 @@ body {
                 margin-right: 10px;
                 input[type=text] {
                     margin-right: -30px;
-                }
-            }
-            ul.sidebar-links {
-                li {
-                    width: ~"calc(100% - 5px)";
-                    padding-left: 5px !important;
-                }
-                li.child {
-                    width: ~"calc(100% - 15px)";
-                    padding-left: 15px !important;
                 }
             }
             ul.bottom {

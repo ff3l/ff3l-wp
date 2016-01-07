@@ -1,0 +1,10 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+  <div class="post">
+    <div class="post-header">
+      <h2>{{ post.post_title }}</h2>
+    </div>
+    {{ post.content }}
+  </div>
+{% endblock %}
