@@ -277,13 +277,13 @@ body {
   display: flex;
 }
 .sponsor .post-thumbmail {
-  width: 300px;
+  width: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .sponsor .post-thumbmail img {
-  width: 300px;
+  width: 100%;
   vertical-align: middle;
 }
 .author {
@@ -444,11 +444,7 @@ body {
   .banner {
     display: none;
   }
-  .sidebar-link-container {
-    padding-bottom: 100px;
-  }
   ul.bottom {
-    margin-top: -100px !important;
     width: 100% !important;
     text-align: center !important;
     bottom: auto !important;
