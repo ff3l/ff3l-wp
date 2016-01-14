@@ -78,14 +78,14 @@
           {% for item in menu.get_items %}
           <li class="{{ item.classes | join(' ') }}">
             <a class="nav-main-link" href="{{item.get_link}}">{{item.title}}</a>
-            {% if item.get_children %}
-              {% for child in item.get_children %}
-                <li class="{{ child.classes | join(' ') }} child">
-                  <a href="{{ child.get_link }}">{{ child.title }}</a>
-                </li>
-              {% endfor %}
-            {% endif %}
           </li>
+          {% if item.get_children %}
+            {% for child in item.get_children %}
+              <li class="{{ child.classes | join(' ') }} child">
+                <a href="{{ child.get_link }}">{{ child.title }}</a>
+              </li>
+            {% endfor %}
+          {% endif %}
           {% endfor %}
         </ul>
       </div>
