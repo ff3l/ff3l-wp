@@ -64,7 +64,7 @@
       {% endif %}
     </div>
   </div>
-  <div class="sidebar right w20 sw100 mw30"><!-- ow80 sow0-->
+  <div id="sidebar" class="sidebar right w20 sw100 mw30">
     <footer>
       <form class="search" method="get" action="{{ home }}/">
         <input type="text" name="s" placeholder="Suchen...">
@@ -98,6 +98,11 @@
     </footer>
     {{ footer }}
   </div>
+  <script>
+    if (/Edge\/12./i.test(navigator.userAgent)){
+      document.getElementById('sidebar').classList.add('ow80', 'sow0');
+    }
+  </script>
   {% block scripts %}{% endblock %}
 </body>
 </html>
