@@ -98,12 +98,6 @@
       {% endblock %}
     </footer>
     {{ footer }}
-    <script>
-      var DEBUG_DATA = JSON.parse('{{ site.debug }}');
-      for (var key in DEBUG_DATA) {
-        console.log(key + ": " + DEBUG_DATA[key]);
-      }
-    </script>
   </div>
   {% block scripts %}{% endblock %}
 </body>
