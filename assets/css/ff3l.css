@@ -114,6 +114,9 @@ body {
 .ow100 {
   margin-left: 100%;
 }
+.ui-datepicker {
+  z-index:2500 !important;
+}
 .sidebar {
   height: 100% !important;
   position: fixed;
