@@ -9,3 +9,11 @@
 	<?php wp_head(); ?>
 </head>
 <body>
+    
+<div class="header">
+    <h1>Willkommen beim Freifunk 3 Ländereck!</h1>
+</div>
+
+<div style="height:1000px;background-color:#fff;font-size:36px">
+
+</div>

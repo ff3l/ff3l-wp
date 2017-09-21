@@ -11,3 +11,50 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(fonts/Quicksand-Regular.ttf) format('truetype');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(fonts/Quicksand-Regular.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+body, html {
+    height: 100%;
+}
+
+.header {
+    /* The image used */
+    background-image: url('img/header.png');
+
+    /* Full height */
+    height: 600px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1 {
+    text-align:center;
+    padding:15px;
+    font-family: 'Quicksand', sans-serif;
+    background-color: hsla(0, 0%, 100%, 0.8);
+    font-size:3rem;
+    font-weight:bold;
+}
