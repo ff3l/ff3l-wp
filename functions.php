@@ -1,5 +1,4 @@
 <?php
-
 function ff3l_scripts() {
     //include bootstap style
     //include font awesome style
@@ -16,3 +15,8 @@ add_action( 'wp_enqueue_scripts', 'ff3l_scripts' );
 
 add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
+
+function register_my_menu() {
+  register_nav_menu('header-menu',__( 'Header Menu' ));
+}
+add_action( 'init', 'register_my_menu' );

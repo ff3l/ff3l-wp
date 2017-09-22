@@ -4,6 +4,7 @@
  */
 
 get_header(); ?>
+
   <div class="container">
       <div class="row">
     <div id="content" role="main">
